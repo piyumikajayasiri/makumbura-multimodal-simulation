@@ -90,7 +90,7 @@ for name, params in scenarios.items():
     print(f"Max queue length: {results['max_queue']}")
     print(f"Total bus departures: {len(results['departures'])}")
 
-# Passenger Wait Time Histogram
+# Passenger Wait Time (Histogram)
 plt.figure(figsize=(8,5))
 for name, res in all_results.items():
     plt.hist(res['wait_times'], bins=20, alpha=0.5, label=name)
@@ -101,7 +101,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Queue Length Comparison – Line Plot with Time Series
+# Queue Length Comparison (Line Plot with Time Series)
 plt.figure(figsize=(10,6))
 for name, res in all_results.items():
     # Assuming queue_snapshots is recorded at regular intervals in your code
@@ -116,7 +116,7 @@ plt.grid(True)
 plt.show()
 
 
-# Bus Departures Over Time – Stacked Area Chart
+# Bus Departures Over Time (Stacked Area Chart)
 plt.figure(figsize=(10,6))
 for name, res in all_results.items():
     departures = res['departures']
